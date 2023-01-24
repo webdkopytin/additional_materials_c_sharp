@@ -42,6 +42,76 @@ namespace _003_File
             File.Move(@"e:\data3.txt", @"d:\newdata3.txt"); // Перемещает заданный файл в новое местоположение и разрешает переименование файла.
 
             #endregion
+
+            #region FileInfo
+
+            ////using System.IO;
+            //// Предоставляет свойства и методы экземпляра для создания, копирования, удаления,
+            //// перемещения и открытия файлов, а также позволяет создавать объекты System.IO.FileStream.
+            //// Этот класс не наследуется. Просмотреть исходный код .NET Framework для этого
+            //// типа Reference Source.
+
+            //FileInfo fileInfo = new FileInfo(@"E:\data.txt");
+
+            //Console.WriteLine(fileInfo.Attributes);     // Archive
+            //Console.WriteLine(fileInfo.Exists);         // True
+            //Console.WriteLine(fileInfo.Extension);      // .txt
+            //Console.WriteLine(fileInfo.IsReadOnly);     // False
+            //Console.WriteLine(fileInfo.LastAccessTime); // 22.08.2025 18:52:14
+            //Console.WriteLine(fileInfo.LastWriteTime);  // 22.08.2025 18:52:14
+            //Console.WriteLine(fileInfo.FullName);       // E:\data.txt
+            //Console.WriteLine(fileInfo.Name);           // data.txt
+            //Console.WriteLine(fileInfo.DirectoryName);  // E:\
+
+            #endregion
+
+            #region Directory, DirectoryInfo
+
+            //// using System.IO;
+            //// Предоставляет статические методы для создания, перемещения и перечисления в каталогах и вложенных каталогах. 
+
+            ////Directory.CreateDirectory
+            ////Directory.Delete
+            ////Directory.Exists
+            ////Directory.Move
+
+            //DirectoryInfo directoryInfo = new DirectoryInfo(@"c:\");
+
+            ////directoryInfo.Attributes
+            ////directoryInfo.Create
+            ////directoryInfo.Delete
+            ////directoryInfo.Exists
+            ////directoryInfo.FullName
+            ////directoryInfo.Name
+            ////directoryInfo.Root
+            ////directoryInfo.GetDirectories
+            ////directoryInfo.GetFiles
+
+            //GetDir(@"D:\ Work\Skill");
+            ////GetDir(@"C:\Program Files\Windows Defender");
+
+            #endregion
+        }
+
+        /// <summary>
+        /// Получение всех файлов и папок выбранного каталога
+        /// </summary>
+        /// <param name = "path" > Путь к каталогу</param>
+        /// <param name = "trim" > Количество отступов</param>
+        static void GetDir(string path, string trim = "")
+        {
+            DirectoryInfo directoryInfo = new DirectoryInfo(path);  // Получаем информацию о текущем каталоге
+
+            foreach (var item in directoryInfo.GetDirectories())    // Перебираем все подкаталоги текущего каталога
+            {
+                Console.WriteLine($"{trim}{item.Name}");            // Выводим информацию о нём
+                GetDir(item.FullName, trim + "    ");               // Запускаем "просмотре" вложенного каталога
+            }
+
+            foreach (var item in directoryInfo.GetFiles())          // Перебираем все файлы текущего каталога
+            {
+                Console.WriteLine($"{trim}{item.Name}");            // Выводим информацию о них
+            }
         }
     }
 }

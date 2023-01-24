@@ -25,6 +25,7 @@ namespace _001_MathDateConvert
             // ulong
 
             // int i = Convert.ToByte("20");
+
             // byte j = 0;
 
             // j = (byte)int.Parse("2011");
@@ -35,10 +36,10 @@ namespace _001_MathDateConvert
 
             #region Math
             // Console.ReadKey();
-            // Предоставляет константы и статические методы для тригонометрических, логарифмических
-            // и иных общих математических функций. 
+            // Предоставляет константы и статические методы для тригонометрических, логарифмических и иных общих математических функций
 
             // Вычислить площадь окружности. Радиусом 2;
+
             // S окр. = πr²
 
             // Math.PI // Представляет отношение длины окружности к ее диаметру, определяемое константой
@@ -50,27 +51,33 @@ namespace _001_MathDateConvert
             // var result = Math.Max(11,22);
 
             // Возвращает наименьшее целое число, которое больше или равно заданному десятичному
+
             // Console.WriteLine(Math.Ceiling(1.2));   // 2
             // Console.WriteLine(Math.Ceiling(-1.2));  // -1
 
             // Возвращает значение e, возведенное в указанную степень.
+
             // Console.WriteLine(Math.Exp(2)); // e²
 
             // Возвращает наибольшее целое число, которое меньше или равно указанному десятичному числу.
+
             // Console.WriteLine(Math.Floor(1.2)); // 1
             // Console.WriteLine(Math.Floor(-1.2)); // -2
 
             // Возвращает указанное число, возведенное в указанную степень.
+
             // Console.WriteLine(Math.Pow(4,3));       // 4³
             // Console.WriteLine(Math.Pow(2020,2));    // 2020²
 
             // Округляет десятичное значение до указанного числа дробных разрядов.
+
             // Console.WriteLine(Math.Round(1.2345)); // 1
             // Console.WriteLine(Math.Round(1.5345)); // 2
             // Console.WriteLine(Math.Round(-1.5345)); // -2
             // Console.WriteLine(Math.Round(-1.56789,3)); // -1,568
 
             // Возвращает целое число, указывающее знак 8-разрядного целого числа со знаком.
+
             // Console.WriteLine(Math.Sign(-20));  // -1
             // Console.WriteLine(Math.Sign(20));   // 1
 
@@ -102,8 +109,7 @@ namespace _001_MathDateConvert
 
             Console.WriteLine($"{newDate}"); // 08.10.2020 1:30:00
 
-            // Console.WriteLine(DateTime.Now);     // Возвращает System.DateTime, которому присвоены текущие дата и время 
-            // данного компьютера, выраженные как местное время.
+            // Console.WriteLine(DateTime.Now); // Возвращает System.DateTime, которому присвоены текущие дата и время данного компьютера, выраженные как местное время.
 
             TimeSpan span = newDate - date;
 

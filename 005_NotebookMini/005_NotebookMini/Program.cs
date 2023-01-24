@@ -15,7 +15,6 @@ namespace _005_NotebookMini
             // Описание заметки
 
             #region Запись
-
             using (StreamWriter sw = new StreamWriter("db.csv", true, Encoding.Unicode))
             {
                 char key = 'д';
@@ -43,7 +42,6 @@ namespace _005_NotebookMini
             #endregion
 
             #region Чтение
-
             using (StreamReader sr = new StreamReader("data.csv", Encoding.Unicode))
             {
                 string line;
@@ -57,7 +55,6 @@ namespace _005_NotebookMini
                     Console.WriteLine($"{data[0],15}{data[1],8} {data[2]}");
                 }
             }
-
             #endregion
         }
     }

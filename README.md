@@ -3,7 +3,7 @@
 
 ➡ [Работа со строками: статический класс String, методы экземпляров](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/002_String/002_String/Program.cs)
 
-➡ Работа с файлами: класс File, FileInfo, Directory, DirectoryInfo
+➡ [Работа с файлами: класс File, FileInfo, Directory, DirectoryInfo](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/003_File/003_File/Program.cs)
 
 ➡ Работа с потоками: StreamWriter и StreamReader
 

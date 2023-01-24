@@ -5,6 +5,6 @@
 
 ➡ [Работа с файлами: класс File, FileInfo, Directory, DirectoryInfo](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/003_File/003_File/Program.cs)
 
-➡ Работа с потоками: StreamWriter и StreamReader
+➡ [Работа с потоками: StreamWriter и StreamReader](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/004_StreamWriterStreamReader/004_StreamWriterStreamReader/Program.cs)
 
 ➡ Расширенная работа со строками: StringReader и StringWriter; изменяемые строки: StringBuilder

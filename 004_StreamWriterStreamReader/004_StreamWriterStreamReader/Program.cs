@@ -7,21 +7,21 @@ namespace _004_StreamWriterStreamReader
     {
         static void Main(string[] args)
         {
-            // Работа с потоками: StreamWriter и StreamReader
-            var dirs = new DirectoryInfo(@"c:\").GetDirectories();  // dirs хранит все каталоги диска C:\
+            var dirs = new DirectoryInfo(@"c:\").GetDirectories(); // dirs хранит все каталоги диска C:\
 
-            StreamWriter streamWriter = new StreamWriter("cDirs.txt");  // Создание "потока" для работы с файлом cDirs.txt
+            StreamWriter streamWriter = new StreamWriter("cDirs.txt"); // Создание "потока" для работы с файлом cDirs.txt
 
             foreach (DirectoryInfo dir in dirs)
             {
-                streamWriter.WriteLine(dir.FullName);   // Записать текущее имя каталога в файл
+                streamWriter.WriteLine(dir.FullName); // Записать текущее имя каталога в файл
+
                 Console.WriteLine($">> {dir.FullName}");
             }
 
             Console.ReadKey();
 
             streamWriter.Flush();
-            streamWriter.Close();                   // Закрываем "поток"
+            streamWriter.Close(); // Закрываем "поток"
 
             // Замечание 1. После работы с поток обязательно нужно закрыть при помощи void Close();
             // или хотя бы записать в файл текущие данные, находящиеся в буфере при помощи void Flush();
@@ -33,16 +33,15 @@ namespace _004_StreamWriterStreamReader
             // Замечание 3. Для более удобной работы с потоками (в общем случае и не только) в C# есть 
             // оператор using предоставляющий удобный синтаксис, обеспечивающий правильное использование объектов IDisposable
 
-            //using (StreamWriter sw = new StreamWriter("cDirs.txt"))  // Создание "потока" для работы с файлом cDirs.txt
-            //{
-            //    foreach (DirectoryInfo dir in dirs)
-            //    {
-            //        sw.WriteLine(dir.Name);   // Записать текущее имя каталога в файл
-            //    }
-            //}
+            // using (StreamWriter sw = new StreamWriter("cDirs.txt"))  // Создание "потока" для работы с файлом cDirs.txt
+            // {
+            //     foreach (DirectoryInfo dir in dirs)
+            //     {
+            //         sw.WriteLine(dir.Name);   // Записать текущее имя каталога в файл
+            //     }
+            // }
 
             // Поток для чтения
-
             using (StreamReader sr = new StreamReader("cDirs.txt"))  // Создание "потока" для работы с файлом cDirs.txt
             {
                 while (!sr.EndOfStream)

@@ -11,4 +11,4 @@
 
 ➡ [Изменяемые строки: StringBuilder](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/007_StringBuilder/007_StringBuilder/Program.cs)
 
-➡ [Расширенная работа со строками: StringReader и StringWriter]()
+➡ [Расширенная работа со строками: StringReader и StringWriter](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/008_StringReaderWriter/008_StringReaderWriter/Program.cs)

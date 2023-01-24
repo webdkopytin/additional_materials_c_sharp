@@ -1,5 +1,5 @@
 ## Работа с файлами
-➡ Встроенные методы. Класс Math и Convert, DateTime
+➡ [Встроенные методы. Класс Math и Convert, DateTime](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/001_MathDateConvert/001_MathDateConvert/Program.cs)
 
 ➡ Работа со строками: статический класс String, методы экземпляров
 

@@ -8,9 +8,8 @@ namespace _003_File
         static void Main(string[] args)
         {
             #region File
-
             // using System.IO;
-            // Предоставляет статические методы для создания, копирования, удаления, перемещения и открытия 
+            // Предоставляет статические методы для создания, копирования, удаления, перемещения и открытия файлов
 
             string text = File.ReadAllText(@"e:\data.txt"); // Открывает текстовый файл, считывает все строки файла и затем закрывает файл.
 
@@ -25,11 +24,11 @@ namespace _003_File
             File.WriteAllLines(@"e:\data2.txt", lines); // Создает новый файл, записывает в него указанный массив строк и затем закрывает файл
 
             text = "Пример текста";
+
             File.WriteAllText(@"e:\data3.txt", text);   // Создает новый файл, записывает в него указанную строку и затем закрывает файл.
                                                         // Если целевой файл уже существует, он будет переопределен.
-
-            //File.AppendAllLines
-            //File.AppendAllText
+            // File.AppendAllLines
+            // File.AppendAllText
 
             File.Copy(@"e:\data3.txt", @"e:\newdata3.txt"); // Копирует существующий файл в новый файл. Перезапись файла с тем же именем не разрешена.
 
@@ -40,56 +39,51 @@ namespace _003_File
             File.Exists(@"e:\newdata3.txt"); // Определяет, существует ли заданный файл.
 
             File.Move(@"e:\data3.txt", @"d:\newdata3.txt"); // Перемещает заданный файл в новое местоположение и разрешает переименование файла.
-
             #endregion
 
             #region FileInfo
+            // using System.IO;
+            // Предоставляет свойства и методы экземпляра для создания, копирования, удаления,
+            // перемещения и открытия файлов, а также позволяет создавать объекты System.IO.FileStream.
+            // Этот класс не наследуется. Просмотреть исходный код .NET Framework для этого
+            // типа Reference Source.
 
-            ////using System.IO;
-            //// Предоставляет свойства и методы экземпляра для создания, копирования, удаления,
-            //// перемещения и открытия файлов, а также позволяет создавать объекты System.IO.FileStream.
-            //// Этот класс не наследуется. Просмотреть исходный код .NET Framework для этого
-            //// типа Reference Source.
+            // FileInfo fileInfo = new FileInfo(@"E:\data.txt");
 
-            //FileInfo fileInfo = new FileInfo(@"E:\data.txt");
-
-            //Console.WriteLine(fileInfo.Attributes);     // Archive
-            //Console.WriteLine(fileInfo.Exists);         // True
-            //Console.WriteLine(fileInfo.Extension);      // .txt
-            //Console.WriteLine(fileInfo.IsReadOnly);     // False
-            //Console.WriteLine(fileInfo.LastAccessTime); // 22.08.2025 18:52:14
-            //Console.WriteLine(fileInfo.LastWriteTime);  // 22.08.2025 18:52:14
-            //Console.WriteLine(fileInfo.FullName);       // E:\data.txt
-            //Console.WriteLine(fileInfo.Name);           // data.txt
-            //Console.WriteLine(fileInfo.DirectoryName);  // E:\
-
+            // Console.WriteLine(fileInfo.Attributes);     // Archive
+            // Console.WriteLine(fileInfo.Exists);         // True
+            // Console.WriteLine(fileInfo.Extension);      // .txt
+            // Console.WriteLine(fileInfo.IsReadOnly);     // False
+            // Console.WriteLine(fileInfo.LastAccessTime); // 22.08.2025 18:52:14
+            // Console.WriteLine(fileInfo.LastWriteTime);  // 22.08.2025 18:52:14
+            // Console.WriteLine(fileInfo.FullName);       // E:\data.txt
+            // Console.WriteLine(fileInfo.Name);           // data.txt
+            // Console.WriteLine(fileInfo.DirectoryName);  // E:\
             #endregion
 
             #region Directory, DirectoryInfo
+            // using System.IO;
+            // Предоставляет статические методы для создания, перемещения и перечисления в каталогах и вложенных каталогах. 
 
-            //// using System.IO;
-            //// Предоставляет статические методы для создания, перемещения и перечисления в каталогах и вложенных каталогах. 
+            // Directory.CreateDirectory
+            // Directory.Delete
+            // Directory.Exists
+            // Directory.Move
 
-            ////Directory.CreateDirectory
-            ////Directory.Delete
-            ////Directory.Exists
-            ////Directory.Move
+            // DirectoryInfo directoryInfo = new DirectoryInfo(@"c:\");
 
-            //DirectoryInfo directoryInfo = new DirectoryInfo(@"c:\");
+            // directoryInfo.Attributes
+            // directoryInfo.Create
+            // directoryInfo.Delete
+            // directoryInfo.Exists
+            // directoryInfo.FullName
+            // directoryInfo.Name
+            // directoryInfo.Root
+            // directoryInfo.GetDirectories
+            // directoryInfo.GetFiles
 
-            ////directoryInfo.Attributes
-            ////directoryInfo.Create
-            ////directoryInfo.Delete
-            ////directoryInfo.Exists
-            ////directoryInfo.FullName
-            ////directoryInfo.Name
-            ////directoryInfo.Root
-            ////directoryInfo.GetDirectories
-            ////directoryInfo.GetFiles
-
-            //GetDir(@"D:\ Work\Skill");
-            ////GetDir(@"C:\Program Files\Windows Defender");
-
+            // GetDir(@"D:\ Work\Skill");
+            // GetDir(@"C:\Program Files\Windows Defender");
             #endregion
         }
 
@@ -105,6 +99,7 @@ namespace _003_File
             foreach (var item in directoryInfo.GetDirectories())    // Перебираем все подкаталоги текущего каталога
             {
                 Console.WriteLine($"{trim}{item.Name}");            // Выводим информацию о нём
+
                 GetDir(item.FullName, trim + "    ");               // Запускаем "просмотре" вложенного каталога
             }
 

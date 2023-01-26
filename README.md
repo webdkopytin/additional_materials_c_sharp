@@ -5,7 +5,7 @@
 
 ➡ [Работа с файлами: класс File, FileInfo, Directory, DirectoryInfo](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/003_File/003_File/Program.cs)
 
-➡ [Работа с потоками: StreamWriter и StreamReader](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/004_StreamWriterStreamReader/004_StreamWriterStreamReader/Program.cs) [Пример: Записная книжка](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/005_NotebookMini/005_NotebookMini/Program.cs)
+➡ [Работа с потоками: StreamWriter и StreamReader](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/004_StreamWriterStreamReader/004_StreamWriterStreamReader/Program.cs) | [Пример: Записная книжка](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/005_NotebookMini/005_NotebookMini/Program.cs)
 
 ➡ [BinaryWriter, BinaryReader, FileStream, GZipStream](https://github.com/webdkopytin/additional_materials_c_sharp/blob/main/006_BinaryWriter_BinaryReader_FileStream_GZipStream/006_BinaryWriter_BinaryReader_FileStream_GZipStream/Program.cs)
 
